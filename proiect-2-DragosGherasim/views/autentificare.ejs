@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cellular Haven</title>
+    </head>
+
+    <body>
+        <div class="auth-container-flex"> 
+            <div class="auth-container">
+                <h2>Autentificare</h2>
+
+                <% if (mesajEroare) { %>
+                    <p><%= mesajEroare %></p>
+                <% } %>
+
+                <form action="/verificare-autentificare" method="POST">
+                    <label for="utilizator">Utilizator:</label>
+                    <input type="text" id="utilizator" name="utilizator">
+                    <label for="parola">Parolă:</label>
+                    <input type="password" id="parola" name="parola"><br>
+                    <button type="submit">Autentificare</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

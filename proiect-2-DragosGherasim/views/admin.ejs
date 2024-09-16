@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Cellular Haven</title>
+</head>
+    <body>
+        <div class="admin-container">
+            <h1>Admin Dashboard</h1>
+
+            <div class="admin-actions">
+                <a href="/admin/creare-bd" class="admin-action-btn">Creare BD</a>
+                <a href="/admin/inserare-bd" class="admin-action-btn">Încărcare BD</a>
+            </div>
+
+            <form action="/admin/adaugare-produs" method="POST" class="admin-form">
+                <div class="form-group">
+                    <label for="name">Nume Produs:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="brand">Brand:</label>
+                    <select id="brand" name="brand">
+                        <option value="Apple">Apple</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="Google">Google</option>
+                        <option value="OnePlus">OnePlus</option>
+                        <option value="Sony">Sony</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="price">Preţ:</label>
+                    <input type="number" id="price" name="price" required>
+                </div>
+                <button type="submit">Adăugare</button>
+            </form>
+
+            <a href="/" class="admin-back-btn">Înapoi la pagină principală</a>
+        </div>
+    </body>
+</html>

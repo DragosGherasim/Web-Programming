@@ -1,0 +1,52 @@
+[
+    {
+        "intrebare": "Care dintre următoarele companii este cunoscută pentru producția de telefoane mobile?",
+        "variante": ["Samsung", "Tesla", "McDonald's", "Nike"],
+        "corect": 0 
+    },
+    {
+        "intrebare": "Care dintre următoarele este un sistem de operare popular pentru telefoane mobile?",
+        "variante": ["Windows XP", "Linux", "iOS", "PlayStation"],
+        "corect": 2 
+    },
+    {
+        "intrebare": "Care dintre următoarele caracteristici este importantă pentru alegerea unui telefon mobil?",
+        "variante": ["Culoarea carcasei", "Memorie RAM", "Numărul de butoane", "Viteza de rotire a hard-disk-ului"],
+        "corect": 1
+    },
+    {
+        "intrebare": "Care dintre următoarele tehnologii este folosită pentru ecranele telefoanelor moderne?",
+        "variante": ["AMOLED", "CRT", "VHS", "Floppy Disk"],
+        "corect": 0
+    }, 
+    {
+        "intrebare": "Care dintre următoarele caracteristici este importantă pentru durata de viață a bateriei unui telefon mobil?",
+        "variante": ["Culoarea ecranului", "Numele producătorului", "Forma telefonului", "Capacitatea bateriei"],
+        "corect": 3 
+    },
+    {
+        "intrebare": "Care dintre următoarele companii a dezvoltat sistemul de operare Android?",
+        "variante": ["Apple", "Microsoft", "Google", "Sony"],
+        "corect": 2
+    }, 
+    {
+        "intrebare": "Ce tip de conexiune wireless este folosit pentru a transfera date între telefoane mobile și alte dispozitive?",
+        "variante": ["Bluetooth", "Ethernet", "HDMI", "USB"],
+        "corect": 0
+    },
+    {
+        "intrebare": "Care dintre următoarele componente contribuie cel mai mult la performanța unui telefon mobil?",
+        "variante": ["Camera foto", "Procesorul", "Forma carcasei", "Tastatura"],
+        "corect": 1
+    },
+    {
+        "intrebare": "Ce înseamnă „5G” în contextul tehnologiei mobile?",
+        "variante": ["A cincea generație de rețele mobile", "Un tip de procesor", "Un model de telefon", "Un format de fișier video"],
+        "corect": 0
+    },
+    {
+        "intrebare": "Care dintre următoarele aplicații este folosită pentru apeluri video pe telefoanele mobile?",
+        "variante": ["Nodepad", "Excel", "Photoshop", "WhatsApp"],
+        "corect": 3
+    }
+]

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cellular Haven</title>
+    </head>
+
+    <body>
+        <div class="questionnaire-container">
+            <h1>Chestionar</h1>
+            
+            <form action="/rezultat-chestionar" method="POST">
+                <% for(let i = 0; i < intrebari.length; i++) { %>
+                    <h3><%= intrebari[i].intrebare %></h3>
+                    <% for(let j = 0; j < intrebari[i].variante.length; j++) { %>
+                        <label>
+                            <input type="radio" name="raspuns<%= i %>" value="<%= intrebari[i].variante[j] %>">
+                            <%= intrebari[i].variante[j] %>
+                        </label><br>
+                    <% } %>
+                    <br>
+                <% } %>
+                <button type="submit">Trimite</button>
+            </form>
+        </div>
+    </body>
+</html>

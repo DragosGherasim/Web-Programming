@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cellular Haven</title>
+    </head>
+
+    <body>
+        <div class="index-container">
+            <h1>Coșul meu</h1>
+
+            <% if (produse.length > 0) { %>
+                <div class="products-container">
+                    <% produse.forEach(produs => { %>
+                        <div class="product-item">
+                            <h2><%= produs.name %></h2>
+
+                            <p>Brand: <%= produs.brand %></p>
+                            <p>Preţ: $<%= produs.price %></p>
+                            <% if (produs.quantity > 1) { %>(Cantitate: <%= produs.quantity %>)<% } %></p>
+                        </div>
+                    <% }); %>
+                </div>
+            <% } else { %>
+                <p>Coșul este gol.</p>
+            <% } %>
+            
+            <a href="/">Înapoi la magazin</a>
+        </div>
+    </body>
+</html>

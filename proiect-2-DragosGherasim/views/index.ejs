@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cellular Haven</title>
+    </head>
+
+    <body>
+        <% if (isAuthenticated) { %>
+            <div class="index-container">
+                <h1>Bine ai venit, <%= numeUtilizator %>!</h1>
+
+                <% if (rolUtilizator === 'ADMIN') { %>
+                    <a href="/admin">Admin Dashboard</a>
+                <% } else { %>
+                    <a href="/chestionar">Chestionar</a>
+                    <a href="/vizualizare-cos">Vizualizare Coş</a>
+                <% } %>
+
+                <a href="/delogare">Deconectare</a>
+            </div>
+        <% } else { %>
+            <div class="index-container">
+                <h1>Bine ai venit!</h1>
+                <a href="/autentificare">Autentificare</a>
+            </div>
+        <% } %>
+
+        <div class="products-container">
+            <% produse.forEach(produs => { %>
+                <div class="product-item">
+                    <h2><%= produs.name %></h2>
+                    
+                    <p>Brand: <%= produs.brand %></p>
+                    <p>Preţ: $<%= produs.price %></p>
+                    <% if (isAuthenticated && rolUtilizator === 'USER') { %>
+                        <form action="/adaugare-cos" method="POST">
+                            <input type="hidden" name="id" value="<%= produs._id %>">
+                            <button type="submit">Adaugă în coș</button>
+                        </form>
+                    <% } %>
+                </div>
+            <% }); %>
+        </div>
+    </body>
+</html>

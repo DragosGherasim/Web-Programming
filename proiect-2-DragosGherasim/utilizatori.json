@@ -1,0 +1,30 @@
+[
+    {
+        "username": "dragos13", 
+        "parola": "Dragos!3", 
+        "nume": "Gherasim", 
+        "prenume": "Dragos",
+        "rol": "USER"
+    },
+    {
+        "username": "daniroc11", 
+        "parola": "Daniroc!1", 
+        "nume": "Roca", 
+        "prenume": "Daniel",
+        "rol": "USER"
+    },
+    {
+        "username": "elieli3", 
+        "parola": "Eliza0#", 
+        "nume": "Elisabetta", 
+        "prenume": "Norses",
+        "rol": "USER"
+    },
+    {
+        "username": "admin", 
+        "parola": "admin", 
+        "nume": "Admin", 
+        "prenume": "",
+        "rol": "ADMIN"
+    }
+]

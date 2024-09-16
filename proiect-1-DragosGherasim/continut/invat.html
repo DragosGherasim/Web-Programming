@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Gym Evolution</title>
+    </head>
+
+    <body>
+        <main>
+            <aside class="learn-page-aside">
+                <h2>Meniu</h2>
+
+                <ul>
+                    <li><a href="#infoSelection">Secțiune Informativă;</a></li>
+                    <li><a href="#customizeSection">Customizare Tricou;</a></li>
+                    <li><a href="#dynamicTableSection">Tabel Dinamic.</a></li>
+                </ul>
+            </aside>
+            
+            <section id="infoSelection">
+                <h2>Secţiune Informativă</h2>
+
+                <p id="date-p"></p>
+                <p id="details-p"></p>
+            </section>
+        
+            <section id="customizeSection">
+                <div class="customize-details">
+                    <h2>Customizare Tricou</h2>
+                    <label>Culoare Contur:</label>
+                    <input type="color" id="borderColor"><br>
+                    <label>Culoare Umplere:</label>
+                    <input type="color" id="bkgColor">
+                    <button onclick="resetCanvas()">Resetare Desen</button>
+                </div>  
+
+                <canvas id="customizeCanvas" width="400" height="400";></canvas>
+            </section>
+
+            <section id="dynamicTableSection">
+                <h2>Tabel Dinamic</h2>
+                
+                <table id="dynamicTable">
+                    <thead>
+                        <tr>
+                            <th>Nume Sală</th>
+                            <th>Adresă</th>
+                            <th>Număr telefon</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Body Line</td>
+                            <td>Str. Ciurchi, Nr. 128, Iaşi</td>
+                            <td>0753211171</td>
+                        </tr>
+
+                        <tr>
+                            <td>Endorfine</td>
+                            <td>Calea Chişinăului, Nr. 29, Iaşi</td>
+                            <td>0742279106</td>
+                        </tr>
+
+                        <tr>
+                            <td>The Rock</td>
+                            <td>Str. Otilia Cazimir, Nr. 10, Iaşi</td>
+                            <td>0773960342</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <form class="dynamicTable-form">
+                    <fieldset>
+                        <legend>Formatare Tabel</legend> 
+
+                        <label>Poziţia în tabel(coloană/linie): </label>
+                        <input type="input" id="colRowPosition"><br>
+
+                        <label>Culoare: </label>
+                        <input type="color" id="colRowColor"><br>
+
+                        <input type="submit" value="Inserare Linie" id="rowInsertBtn">
+                        <input type="submit" value="Inserare Coloană" id="colInsertBtn">
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

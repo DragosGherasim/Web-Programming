@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Gym Evolution</title>
+
+        <link href="css/stil.css" rel="stylesheet" type="text/css">
+        <script src="js/script.js"></script>
+    </head>
+
+    <body onload="contentChange('acasa')">
+        <div class="navbar">
+            <a href="index.html" class="logo-wrapper"></a>
+            <nav class="nav-links"> 
+                <a onclick="contentChange('acasa')">Acasă</a> 
+                <a onclick="contentChange('inregistreaza')">Înregistrează</a>
+                <a onclick="contentChange('video')">Video</a>
+                <a onclick="contentChange('despre')">Despre</a>
+                <a onclick="contentChange('desen')">Desen</a>
+                <a onclick="contentChange('invat', undefined, 'loadLearnPage')">Învăţ</a>
+                <a onclick="contentChange('persoane', ['js/persoane.js'], 'loadPersons')">Persoane</a>
+                <a onclick="contentChange('verifica')">Verifică</a>
+                <a onclick="contentChange('cumparaturi', ['js/cumparaturi.js', 'js/worker.js'], 'loadShoppingCartFirst')">Cumpăraturi</a>
+            </nav>
+        </div>
+
+        <main id="continut">
+        </main>
+        
+        <footer>
+            <p>
+                &copy; 2023. Gherasim Dragoş-George - Programare web
+            </p>
+        </footer>
+    </body>
+</html>

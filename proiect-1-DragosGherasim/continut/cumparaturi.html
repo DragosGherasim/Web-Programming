@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Gym Evolution</title>
+    </head>
+
+    <body>
+        <main>
+            <div class="shopping-cart-page">
+                <form class="add-product-form" id="addProductForm" onsubmit="return false;">
+                    <fieldset>
+                        <legend>Detalii Produs:</legend>
+
+                        <label>Nume:</label>
+                        <input type="text" id="productName">
+
+                        <label>Cantitate: </label>
+                        <input type="text" id="productAmount">
+
+                        <label for="storageMethod">Metoda de stocare:</label>
+                        <select id="storageMethod" onchange="changeStorageMethod()">
+                            <option value="localStorage">localStorage</option>
+                            <option value="indexedDB">IndexedDB</option>
+                        </select>
+
+                        <button onclick="addProduct()">Adaugă</button>
+                        <button onclick="resetDatabase()">Resetează BD</button>
+                    </fieldset>
+                </form>
+
+                <table id="shoppingCartTable">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nume</th>
+                            <th>Cantitate</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shoppingCartBody">
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </body>
+</html>

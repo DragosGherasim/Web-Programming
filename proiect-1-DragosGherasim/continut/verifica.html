@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Gym Evolution</title>
+    </head> 
+
+    <body>
+        <main>
+            <div class="validate-user-form">
+                <form onsubmit="return false;" >
+                    <fieldset>
+                        <legend>Informaţii Cont: </legend>
+                        <label>Nume Utilizator:</label>
+                        <input type="text" id="username">
+
+                        <label>Parolă:</label>
+                        <input type="password" id="password">
+
+                        <button onclick="validateUser()">Verificare</button>
+
+                        <p id="validate-status-p"></p>
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

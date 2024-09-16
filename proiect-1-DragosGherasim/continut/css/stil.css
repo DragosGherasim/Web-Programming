@@ -1,0 +1,858 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    margin: 0; 
+    font-family: Montserrat, sans-serif; 
+    background-image: linear-gradient(to right, #003C43, #135D66);
+}
+
+.navbar {
+    position: fixed; 
+    top: 0; 
+    width: calc(100% - 20px); 
+    z-index: 1000;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    background-image: linear-gradient(to right, #77B0AA, #E3FEF7);
+    padding: 4px 10px
+}
+
+.navbar > .logo-wrapper{
+    width: 80px;  
+    height: 50px; 
+    background-image: url(../imagini/gym-evolution-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nav-links > a {
+    color: black;
+    font-family: Montserrat, sans-serif; 
+    font-size: 16px; 
+    text-decoration: none;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.nav-links > a:hover {
+    color: #135D66;
+    border-bottom: 2px solid #135D66; 
+}
+
+.nav-links > a.active:hover{
+    border-bottom: 2px solid #135D66; 
+}
+
+.nav-links > a.active {
+    border-bottom: 2px solid black; 
+    pointer-events: none;
+}
+
+footer p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #77B0AA;
+}
+
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 20px 0;
+}
+
+.page-column-st {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+
+.page-column-nd {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.page-item {
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.page-item h3 {
+    display: inline-block; 
+    position: relative; 
+    color: #E3FEF7;
+    font-size: 22px; 
+}
+
+.page-item p {
+    display: none;
+    color: #003C43;
+    display: none;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.page-item:hover p {
+    display: block; 
+    opacity: 1; 
+}
+
+.page-item:hover {
+    background-color: #77B0AA;
+    transform: scale(1.1);
+}
+
+.page-item h3:hover::after {
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    bottom: -3px; 
+    width: 100%; 
+    height: 2px; 
+    background-color: #E3FEF7;
+    transition: all 0.3s ease; 
+}
+
+@media screen and (max-width: 610px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .navbar .logo-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+
+    .page-list {
+        margin: 70px auto;
+    }
+
+    .nav-links a {
+        margin: 0 10px; 
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar,
+    .nav-links {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .navbar .logo-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .nav-links a {
+        margin: 10px 0; 
+    }
+
+    .page-list {
+        margin: 90px auto;
+    }
+}
+
+.registration-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto;
+}
+
+.registration-form fieldset {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center; 
+    background-color: #77B0AA;
+    padding: 20px; 
+    width: 400px;
+    border: none; 
+    border-radius: 10px; 
+}
+
+.registration-form legend {
+    font-size: 1.3em; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    color: #135D66; 
+    background-color: #77B0AA; 
+    padding: 5px 10px; 
+    border-radius: 10px;
+}
+
+.registration-form label {
+    display: inline-block; 
+    width: 250px; 
+    font-weight: bold;
+    font-size: 18px; 
+    color: #135D66;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="password"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"],
+.registration-form input[type="date"],
+.registration-form input[type="time"],
+.registration-form input[type="url"],
+.registration-form input[type="range"],
+.registration-form input[list],
+.registration-form select,
+.registration-form textarea {
+    width: 260px;
+    padding: 8px; 
+    margin-bottom: 15px; 
+    border: 1px solid #777; 
+    border-radius: 5px; 
+}
+
+.registration-form input[type="color"] {
+    margin-bottom: 15px; 
+}
+
+.registration-form .registration-form textarea {
+    height: 150px;
+    max-height: 170px
+}
+
+.registration-form .registration-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #135D66; 
+    color: #E3FEF7; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease;
+}
+
+.registration-form .registration-btn:hover {
+    background-color: #17B0AA;
+}
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 20px;
+}
+
+.video-item h3 {
+    color: #E3FEF7;
+}
+
+.video-item {
+    margin-right: 50px; 
+}
+
+.video-item:last-child {
+    margin-right: 0; 
+}
+
+.video-item iframe{
+    width: 450px;
+    height: 250px;
+}
+
+@media screen and (max-width: 768px) {
+    .video-item {
+        width: calc(50% - 20px);
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .video-gallery {
+        margin: 70px 0;
+    }
+
+    .video-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-gallery {
+        margin: 40px 0;
+    }
+
+    .video-item {
+        width: 100%;
+    }
+}
+
+.about-introduction p {
+    color: #66fcf1;
+    text-indent: 40px;
+    font-size: 18px;
+    margin-top: 70px;
+    margin-left: 15px;
+}
+
+.about-introduction p:last-child {
+    margin-top: 30px;
+}
+
+.about-introduction a:visited {
+    color: #E3FEF7; 
+}
+
+.about-introduction img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%; 
+    margin: 20px auto;
+    border-radius: 5px; 
+}
+
+.about-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.about-table p {
+    color: #66fcf1;
+    font-size: 18px;
+}
+
+.about-table table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 400px;
+}
+
+.about-table th, .about-table td {
+    padding: 8px;
+    border: 1px solid #003C43;
+    color: #E3FEF7;
+    text-align: left;
+}
+
+.about-table th {
+    background-color: #135D66;
+    color: #E3FEF7;
+    font-weight: bold;
+}
+
+.about-table tbody tr:nth-child(even) {
+    background-color: #77B0AA;
+}
+
+.about-table tbody tr:nth-child(odd) {
+    background-color: #003C43;
+}
+
+.about-table tbody tr:hover {
+    background-color: #66fcf1;
+}
+
+.about-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 400px;
+    margin: 40px  auto;
+}
+
+.about-form p {
+    color: #66fcf1;
+    font-size: 18px;
+}
+
+.about-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #77B0AA;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+}
+
+.about-form label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    color: #135D66;
+    margin-bottom: 5px;
+}
+
+.about-form input[type="text"],
+.about-form input[type="password"],
+.about-form select,
+.about-form textarea {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #777;
+    border-radius: 5px;
+}
+
+.about-form textarea {
+    height: 150px;
+    max-height: 170px;
+    resize: vertical; 
+}
+
+.about-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.about-form input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #135D66; 
+    color: #E3FEF7; 
+    font-size: 14px; 
+    transition: background-color 0.3s ease;
+}
+
+.about-form input[type="submit"]:hover {
+    background-color: #45a39e;
+}
+
+.about-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 400px;
+    margin: 20px  auto;
+}
+
+.about-list p {
+    color: #66fcf1;
+    font-size: 18px;
+}
+
+.about-list ol {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    list-style-type: lower-roman; 
+}
+
+.about-list li {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #66fcf1;
+}
+
+.about-iframe p{
+    color: #66fcf1;
+    text-indent: 40px;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.about-iframe a:visited {
+    color: #E3FEF7; 
+}
+
+.about-iframe iframe {
+    border: none; 
+    display: inline-block; 
+    width: 1000px; 
+    height: 500px; 
+    margin-left: 25px;
+    margin-bottom: 60px;
+}
+
+.draw-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.draw-icon h2 {
+    color: #66fcf1;
+    margin-top: 80px;
+    margin-right: 42px;
+}
+
+.learn-page-aside {
+    background-color: #135D66;
+    color: #E3FEF7;
+    padding: 20px;
+    width: 200px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.learn-page-aside h2 {
+    margin-bottom: 10px;
+}
+
+.learn-page-aside ul li {
+    margin-bottom: 10px;
+}
+
+.learn-page-aside ul li a {
+    color: #E3FEF7;
+    text-decoration: none;
+}
+
+.learn-page-aside ul li a:hover {
+    color: #77B0AA;
+}
+
+section {
+    background-color: #77B0AA;
+    color: #E3FEF7;
+    padding: 25px;
+    margin: 50px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+}
+
+#customizeSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customize-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px; 
+}
+
+.customize-details h2 {
+    text-align: center;
+}
+
+.customize-details label {
+    text-align: center;
+}
+
+.customize-details input[type="color"] {
+    width: 100px; 
+}
+
+#customizeCanvas {
+    border: 1px solid black;
+    cursor: crosshair;
+}
+
+.customize-details button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #135D66;
+    color: #E3FEF7;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.customize-details button:hover {
+    background-color: #17B0AA;
+}
+
+#dynamicTableSection #dynamicTable {
+    border-collapse: collapse;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+#dynamicTableSection #dynamicTable th, #dynamicTable td {
+    padding: 8px;
+    border: 1px solid #003C43;
+}
+
+#dynamicTableSection #dynamicTable th {
+    background-color: #135D66;
+    color: #E3FEF7;
+}
+
+#dynamicTableSection #dynamicTable tbody tr:nth-child(even) {
+    background-color: #77B0AA;
+}
+
+#dynamicTableSection #dynamicTable tbody tr:nth-child(odd) {
+    background-color: #003C43;
+}
+
+#dynamicTableSection #dynamicTable tbody tr:hover {
+    background-color: #66fcf1;
+}
+
+.dynamicTable-form fieldset {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 60%;
+    margin-top: 20px;
+    border-radius: 10px; 
+}
+
+.dynamicTable-form legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dynamicTable-form label {
+    margin-right: 10px;
+}
+
+.dynamicTable-form input[type="input"],
+.dynamicTable-form input[type="color"],
+.dynamicTable-form input[type="submit"] {
+    margin-right: 30px;
+}
+
+.dynamicTable-form input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #135D66; 
+    color: #E3FEF7; 
+    font-size: 14px; 
+    transition: background-color 0.3s ease;
+}
+
+.dynamicTable-form input[type="submit"]:hover {
+    background-color: #45a39e;
+}
+
+.display-persons {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 80px;
+}
+
+.display-persons p {
+    color: #66fcf1;
+    font-size: 18px;
+}
+
+.display-persons table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 400px;
+}
+
+.display-persons th, .display-persons td {
+    padding: 8px;
+    border: 1px solid #003C43;
+    color: #E3FEF7;
+    text-align: left;
+}
+
+.display-persons th {
+    background-color: #135D66;
+    color: #E3FEF7;
+    font-weight: bold;
+}
+
+.display-persons tbody tr:nth-child(even) {
+    background-color: #77B0AA;
+}
+
+.display-persons tbody tr:nth-child(odd) {
+    background-color: #003C43;
+}
+
+.display-persons tbody tr:hover {
+    background-color: #66fcf1;
+}
+
+.validate-user-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+}
+
+.validate-user-form legend {
+    font-size: 1.3em; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    color: #135D66; 
+    background-color: #77B0AA; 
+    padding: 5px 10px; 
+    border-radius: 10px;
+}
+
+.validate-user-form fieldset {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #77B0AA;
+    padding: 20px; 
+    width: 300px;
+    border: none; 
+    border-radius: 10px; 
+}
+
+.validate-user-form label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    color: #135D66;
+    margin-bottom: 5px;
+}
+
+.validate-user-form input[type="text"],
+.validate-user-form input[type="password"]{
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #777;
+    border-radius: 5px;
+}
+
+.validate-user-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #135D66; 
+    color: #E3FEF7; 
+    font-size: 14px; 
+    transition: background-color 0.3s ease;
+}
+
+.validate-user-form button:hover {
+    background-color: #45a39e;
+}
+
+.validate-stutus-p {
+    color: #135D66;
+}
+
+.shopping-cart-page {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    background-color: #77B0AA;
+    color: #E3FEF7;
+    padding: 15px;
+    margin: 80px 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+.add-product-form fieldset {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px; 
+}
+
+.add-product-form legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.add-product-form label {
+    margin-right: 10px;
+}
+
+.add-product-form input[type="text"],
+.add-product-form select {
+    padding: 6px;
+    margin-right: 15px;
+    border: 1px solid #777;
+    border-radius: 5px;
+}
+
+.add-product-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #135D66; 
+    color: #E3FEF7; 
+    font-size: 12px; 
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.add-product-form button:last-child{
+    margin-right: 0px;
+}
+
+.add-product-form button:hover {
+    background-color: #45a39e;
+}
+
+#shoppingCartTable{
+    border-collapse: collapse;
+    width: 30%;
+    margin: 20px auto;
+}
+
+#shoppingCartTable th, 
+#shoppingCartTable td {
+    padding: 8px;
+    border: 1px solid #003C43;
+}
+
+#shoppingCartTable th {
+    background-color: #135D66;
+    color: #E3FEF7;
+}
+
+#shoppingCartTable tbody tr:nth-child(even) {
+    background-color: #77B0AA;
+}
+
+#shoppingCartTable tbody tr:nth-child(odd) {
+    background-color: #003C43;
+}
+
+#shoppingCartTable tbody tr:hover {
+    background-color: #66fcf1;
+}

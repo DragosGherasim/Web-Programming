@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Gym Evolution</title>
+    </head>
+
+    <body> 
+        <main>
+            <div class="registration-form">
+                <form onsubmit="return false;">
+                    <fieldset>
+                        <legend>Informaţii Utilizator: </legend>
+
+                        <label>Nume Utilizator: </label>
+                        <input type="text" id="username">
+
+                        <label>Parola: </label>
+                        <input type="password" id="password">
+
+                        <label>Nume: </label>
+                        <input type="text">
+
+                        <label>Prenume: </label>
+                        <input type="text">
+
+                        <label>Email: </label>
+                        <input type="email">
+
+                        <label>Număr Telefon: </label>
+                        <input type="tel">
+
+                        <label>Sexul: </label>
+                        <select>
+                            <option>Bărbăt</option>
+                            <option>Femeie</option>
+                        </select>
+                        
+                        <label>Ore de sală/săptămână: </label>
+                        <input list="oreSala">
+                        <datalist id="oreSala">
+                            <option value="3 ore"></option>
+                            <option value="6 ore"></option>
+                            <option value="9 ore"></option>
+                        </datalist>
+
+                        <label>Culoarea Preferată: </label>
+                        <input type="color">
+
+                        <label>Data Naşterii: </label>
+                        <input type="date">
+
+                        <label>Ora pentru sală: </label>
+                        <input type="time">
+
+                        <label>Vârstă: </label>
+                        <input type="range">
+
+                        <label>Url social-media: </label>
+                        <input type="url">
+
+                        <label>Descriere personală: </label>
+                        <textarea>
+                        </textarea>
+
+                        <button class="registration-btn" onclick="registrationUser()">Înregistrare</button>
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

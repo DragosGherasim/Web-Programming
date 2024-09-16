@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE persoane SYSTEM "persoane.dtd">
+<persoane>
+	<persoana id="1">
+		<nume>Popescu</nume>
+		<prenume>Ion</prenume>
+		<varsta>23</varsta>
+        <adresa>
+            <strada>Bd.Traian</strada>
+            <numar>13</numar>
+            <localitate>Vaslui</localitate>
+            <judet>Vaslui</judet>
+            <tara>România</tara>
+        </adresa>
+        <CNP>1234567890</CNP>
+        <nationalitate>română</nationalitate>
+        <jobs>
+            <job>Mecanic</job>
+        </jobs>
+	</persoana>
+
+    <persoana id="2">
+		<nume>Roca</nume>
+		<prenume>Daniel</prenume>
+		<varsta>21</varsta>
+        <adresa>
+            <strada>Bd.Vladimirescu</strada>
+            <numar>11</numar>
+            <localitate>Piatra-Neamţ</localitate>
+            <judet>Neamţ</judet>
+            <tara>România</tara>
+        </adresa>
+        <CNP>6789543210</CNP>
+        <nationalitate>germană</nationalitate>
+        <jobs>
+            <job>Recepţionist</job>
+            <job>Antreprenor</job>
+        </jobs>
+	</persoana>
+
+    <persoana id="3">
+		<nume>Gherasim</nume>
+		<prenume>Dragos</prenume>
+		<varsta>23</varsta>
+        <adresa>
+            <strada>Bd.Degebal</strada>
+            <numar>3</numar>
+            <localitate>Oneşti</localitate>
+            <judet>Bacău</judet>
+            <tara>România</tara>
+        </adresa>
+        <CNP>1234565432</CNP>
+        <nationalitate>română</nationalitate>
+        <jobs>
+            <job>Antreprenor</job>
+        </jobs>
+	</persoana>
+</persoane>
